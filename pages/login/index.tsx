@@ -4,8 +4,7 @@ import LoginForm from "@/components/LoginForm/LoginForm";
 const index = () => {
   return (
     <div>
-      {" "}
-      <LoginForm />{" "}
+      <LoginForm />
     </div>
   );
 };
