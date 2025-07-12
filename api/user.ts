@@ -35,6 +35,7 @@ export const registerUser = async ({
       username,
       email,
       password,
+      savedAnswers: [],
     });
 
     return response;

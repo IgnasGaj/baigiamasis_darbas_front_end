@@ -16,6 +16,9 @@ const LoginForm = () => {
       const response = await loginUser({ email, password });
 
       Cookies.set("qa-app-user-jwt-token", response.data.jwt);
+
+      Cookies.set("qa-app-user-username", response.data.username);
+
       setErrorMessage("");
       router.push("/");
     } catch (err: any) {

@@ -28,19 +28,27 @@ export const fetchAnswersByQuestionId = async ({
 
 type InsertAnswerProps = {
   jwt: string;
+  questionId: string;
   answer: {
-    question_id: string;
     answer_text: string;
   };
 };
 
-export const insertAnswer = async ({ jwt, answer }: InsertAnswerProps) => {
+export const insertAnswer = async ({
+  jwt,
+  questionId,
+  answer,
+}: InsertAnswerProps) => {
   try {
-    const response = await axios.post(`${config.BASE_URL}/answers`, answer, {
-      headers: {
-        Authorization: jwt,
-      },
-    });
+    const response = await axios.post(
+      `${config.BASE_URL}/answers/${questionId}/answers`,
+      answer,
+      {
+        headers: {
+          Authorization: jwt,
+        },
+      }
+    );
 
     return response;
   } catch (err) {

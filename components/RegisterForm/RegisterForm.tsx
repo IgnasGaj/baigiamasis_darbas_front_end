@@ -18,7 +18,7 @@ const RegisterForm = () => {
 
       Cookies.set("qa-app-user-jwt-token", response.data.jwt);
       setErrorMessage("");
-      router.push("/");
+      router.push("/login");
     } catch (err: any) {
       if (err?.response?.status === 400) {
         setErrorMessage("Invalid registration data");
