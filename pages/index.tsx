@@ -4,6 +4,7 @@ import Cookie from "js-cookie";
 import { QuestionType } from "@/types/question";
 import QuestionsWrapper from "@/components/QuestionsWrapper/QuestionsWrapper";
 import { fetchAllQuestions } from "@/api/question";
+import PageTemplate from "@/components/PageTemplate/PageTemplate";
 
 export default function QuestionsPage() {
   const router = useRouter();
@@ -34,5 +35,9 @@ export default function QuestionsPage() {
     getAllQuestions();
   }, []);
 
-  return <QuestionsWrapper questions={questions} />;
+  return (
+    <PageTemplate>
+      <QuestionsWrapper questions={questions} />
+    </PageTemplate>
+  );
 }

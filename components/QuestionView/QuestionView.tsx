@@ -27,7 +27,7 @@ const QuestionView = ({ question }: QuestionViewProps) => {
       );
 
       if (response.status === 200) {
-        router.push("/questions");
+        router.push("/");
       }
     } catch (err) {
       console.error(err);
@@ -36,17 +36,19 @@ const QuestionView = ({ question }: QuestionViewProps) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.description}>
-        <h1>{question.question_title}</h1>
-        <h3>Asked by: {question.username}</h3>
-        <p>{question.question_text}</p>
-        <h4>Created at: {new Date(question.createdAt).toLocaleString()}</h4>
+      <div className={styles.inner}>
+        <div className={styles.description}>
+          <h1>{question.question_title}</h1>
+          <h3>Asked by: {question.username}</h3>
+          <p>{question.question_text}</p>
+          <h4>Created at: {new Date(question.createdAt).toLocaleString()}</h4>
 
-        <Button
-          title="Delete Question"
-          type="DANGER"
-          onClick={onDeleteQuestion}
-        />
+          <Button
+            title="Delete Question"
+            type="DANGER"
+            onClick={onDeleteQuestion}
+          />
+        </div>
       </div>
     </div>
   );

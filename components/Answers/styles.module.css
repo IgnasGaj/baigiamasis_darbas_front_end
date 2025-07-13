@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.answerItem {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.answerItem p {
+  color: black;
+}
+
+.answerItem small {
+  color: black;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.likeBtn,
+.dislikeBtn {
+  background-color: #525252;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.likeBtn:hover {
+  background-color: #b6f3b6;
+}
+
+.dislikeBtn:hover {
+  background-color: #f7bfbf;
+}

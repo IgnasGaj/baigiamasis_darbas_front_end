@@ -32,7 +32,7 @@ const LoginForm = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Q&A App</h1>
+      <h1>BlitzQuestions</h1>
 
       <div className={styles.form}>
         <input

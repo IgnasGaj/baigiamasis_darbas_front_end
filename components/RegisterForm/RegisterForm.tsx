@@ -30,23 +30,23 @@ const RegisterForm = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Register to Q&A App</h1>
+      <h1>Register to BlitzQuestions</h1>
 
       <div className={styles.form}>
         <input
-          placeholder="username"
+          placeholder="Username"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          placeholder="email"
+          placeholder="Email"
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          placeholder="password"
+          placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}

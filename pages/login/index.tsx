@@ -4,9 +4,23 @@ import Link from "next/link";
 
 const index = () => {
   return (
-    <div>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <LoginForm />
-      <Link href="/register">Register here</Link>
+      <Link
+        href="/register"
+        style={{
+          marginTop: "1rem",
+          fontSize: "14px",
+          color: "#0070f3",
+          textDecoration: "underline",
+          cursor: "pointer",
+          textAlign: "center",
+        }}
+      >
+        Don’t have an account? <strong>REGISTER HERE!</strong>
+      </Link>
     </div>
   );
 };

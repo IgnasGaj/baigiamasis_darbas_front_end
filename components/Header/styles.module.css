@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.desktopNav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.desktopNav li a {
+  color: white;
+  text-decoration: none;
+}
+
+.burgerBtn {
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.burgerBtn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile menu */
+.mobileMenu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #444;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobileMenu li {
+  margin-bottom: 1rem;
+}
+
+.mobileMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: block;
+  }
+}

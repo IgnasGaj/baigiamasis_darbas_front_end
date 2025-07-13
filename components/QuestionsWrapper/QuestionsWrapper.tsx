@@ -27,7 +27,9 @@ const QuestionsWrapper = ({ questions }: QuestionsWrapperProps) => {
           username={q.username}
         />
       ))}
-      <Link href="/questionInsert">Ask A Question!</Link>;
+      <Link href="/questionInsert" className={styles.askButton}>
+        Ask A Question!
+      </Link>
     </div>
   );
 };
