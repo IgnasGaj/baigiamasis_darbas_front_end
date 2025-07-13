@@ -5,6 +5,7 @@ import { QuestionType } from "@/types/question";
 import QuestionsWrapper from "@/components/QuestionsWrapper/QuestionsWrapper";
 import { fetchAllQuestions } from "@/api/question";
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
+import axios from "axios";
 
 export default function QuestionsPage() {
   const router = useRouter();
@@ -22,10 +23,10 @@ export default function QuestionsPage() {
     try {
       const result = await fetchAllQuestions({ jwt });
       setQuestions(result.data.questions);
-    } catch (err: any) {
+    } catch (err) {
       console.log(err);
 
-      if (err.response?.status === 401) {
+      if (axios.isAxiosError(err) && err.response?.status === 401) {
         router.push("/login");
       }
     }

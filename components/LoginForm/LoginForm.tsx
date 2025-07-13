@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { loginUser } from "@/api/user";
+import axios from "axios";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -16,13 +17,12 @@ const LoginForm = () => {
       const response = await loginUser({ email, password });
 
       Cookies.set("qa-app-user-jwt-token", response.data.jwt);
-
       Cookies.set("qa-app-user-username", response.data.username);
 
       setErrorMessage("");
       router.push("/");
-    } catch (err: any) {
-      if (err?.response?.status === 401) {
+    } catch (err) {
+      if (axios.isAxiosError(err) && err.response?.status === 401) {
         setErrorMessage("Invalid email or password");
       } else {
         setErrorMessage("Unexpected error, please try again");
