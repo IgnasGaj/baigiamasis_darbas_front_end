@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { registerUser } from "@/api/user";
 import axios from "axios";
@@ -17,7 +16,6 @@ const RegisterForm = () => {
     try {
       const response = await registerUser({ username, email, password });
 
-      Cookies.set("qa-app-user-jwt-token", response.data.jwt);
       setErrorMessage("");
       router.push("/login");
     } catch (err) {
