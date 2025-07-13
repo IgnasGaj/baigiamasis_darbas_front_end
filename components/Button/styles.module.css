@@ -1,0 +1,46 @@
+.main {
+  padding: 0.9rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.DEFAULT {
+  background-color: #000;
+  color: #fff;
+}
+
+.DEFAULT:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 12px #000;
+}
+
+.WARNING {
+  background-color: #f0ad4e;
+  color: #000;
+  box-shadow: 0 0 6px rgba(240, 173, 78, 0.6);
+}
+
+.WARNING:hover {
+  background-color: #fff3cd;
+  color: #856404;
+  box-shadow: 0 0 12px #856404;
+}
+
+.DANGER {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
+}
+
+.DANGER:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 14px rgba(255, 0, 0, 0.9);
+}

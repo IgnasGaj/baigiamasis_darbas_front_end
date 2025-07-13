@@ -1,62 +1,36 @@
 .container {
   width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
 .answerItem {
+  position: relative;
   width: 100%;
-  background-color: #fff;
-  padding: 1.5rem;
+  max-width: 1000px;
+  background-color: white;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  color: #222;
+  gap: 0.5rem;
+  height: auto;
 }
 
 .answerItem p {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  color: black;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
   margin: 0;
+  font-size: 1.2rem;
 }
 
 .answerItem small {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.25rem;
-}
-
-.likeBtn,
-.dislikeBtn {
-  background-color: #444;
-  border: none;
-  padding: 0.5rem 1.2rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: white;
-  user-select: none;
-}
-
-.likeBtn:hover {
-  background-color: #3cb371;
-  color: white;
-}
-
-.dislikeBtn:hover {
-  background-color: #e57373;
-  color: white;
+  color: black;
+  margin-top: auto;
 }

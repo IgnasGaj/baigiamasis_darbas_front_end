@@ -12,8 +12,8 @@ const index = () => {
         href="/register"
         style={{
           marginTop: "1rem",
-          fontSize: "14px",
-          color: "#0070f3",
+          fontSize: "1.5rem",
+          color: "#ffffffff",
           textDecoration: "underline",
           cursor: "pointer",
           textAlign: "center",
