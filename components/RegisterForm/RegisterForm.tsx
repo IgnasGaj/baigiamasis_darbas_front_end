@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { registerUser } from "@/api/user";
+import axios from "axios";
 
 const RegisterForm = () => {
   const [username, setUsername] = useState("");
@@ -19,8 +20,8 @@ const RegisterForm = () => {
       Cookies.set("qa-app-user-jwt-token", response.data.jwt);
       setErrorMessage("");
       router.push("/login");
-    } catch (err: any) {
-      if (err?.response?.status === 400) {
+    } catch (err) {
+      if (axios.isAxiosError(err) && err.response?.status === 400) {
         setErrorMessage("Invalid registration data");
       } else {
         setErrorMessage("Unexpected error, please try again");
