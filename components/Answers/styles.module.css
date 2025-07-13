@@ -1,54 +1,62 @@
 .container {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1.5rem;
 }
 
 .answerItem {
-  position: relative;
   width: 100%;
-  max-width: 800px;
-  background-color: #f9f9f9;
-  padding: 1rem 1.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  color: #222;
 }
 
 .answerItem p {
-  color: black;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .answerItem small {
-  color: black;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .likeBtn,
 .dislikeBtn {
-  background-color: #525252;
+  background-color: #444;
   border: none;
-  padding: 0.4rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  color: white;
+  user-select: none;
 }
 
 .likeBtn:hover {
-  background-color: #b6f3b6;
+  background-color: #3cb371;
+  color: white;
 }
 
 .dislikeBtn:hover {
-  background-color: #f7bfbf;
+  background-color: #e57373;
+  color: white;
 }

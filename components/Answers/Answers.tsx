@@ -15,11 +15,6 @@ const Answer = ({ answer }: AnswerProps) => {
           By User: {answer.username} |{" "}
           {new Date(answer.createdAt).toLocaleString()}
         </small>
-
-        <div className={styles.actions}>
-          <button className={styles.likeBtn}>Like</button>
-          <button className={styles.dislikeBtn}>Dislike</button>
-        </div>
       </li>
     </div>
   );

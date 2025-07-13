@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      © 2025 Q&A App. All rights reserved.
+      © 2025 BlitzQuestions. All rights reserved.
     </footer>
   );
 };

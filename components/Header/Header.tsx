@@ -3,6 +3,7 @@ import Link from "next/link";
 import burgerBtnImg from "../../assets/images/burger-menu-svgrepo-com (1).svg";
 import { useState } from "react";
 import Cookie from "js-cookie";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
   const [isShowMobileMenu, setShowMobileMenu] = useState(false);
@@ -11,7 +12,9 @@ const Header = () => {
     <>
       <header className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">Logo</Link>
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
 
         <nav className={styles.desktopNav}>
