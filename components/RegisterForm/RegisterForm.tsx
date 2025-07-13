@@ -14,7 +14,7 @@ const RegisterForm = () => {
 
   const onRegister = async () => {
     try {
-      const response = await registerUser({ username, email, password });
+      await registerUser({ username, email, password });
 
       setErrorMessage("");
       router.push("/login");
